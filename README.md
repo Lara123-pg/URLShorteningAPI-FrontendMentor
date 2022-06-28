@@ -33,6 +33,8 @@ URL Shortening API é um desafio da plataforma FrontendMentor, que tem o objetiv
 
 # Link do projeto hospedado
 
+https://urlshorteningapi-frontendmentor.surge.sh/
+
 # Autor
 
 Lara Fernanda
