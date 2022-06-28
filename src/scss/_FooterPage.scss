@@ -1,0 +1,65 @@
+footer {
+    @include StyleWH(100%, 500px);
+
+    background-color: $color7;
+
+    padding: 2em 0 0 4em;
+
+    div.infoFooter {
+        @include Display(space-around, flex-start);
+
+        height: 250px;
+
+        padding-top: 2em;
+
+        nav {
+            @include Display(space-between, flex-start);
+            
+            width: 400px;
+
+            ul {
+                list-style: none;
+
+                li.text {
+                    @include FontColor($color8, 0.9rem, 700);
+
+                    padding-bottom: 1.5em;
+                }
+
+                li a {
+                    @include FontColor($color4, 0.8rem, 500);
+    
+                    text-decoration: none;
+
+                    line-height: 25px;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        color: $color1;
+                    }
+                }
+            }
+        }
+
+        div.socialMedias {
+            @include Display(space-between, flex-start);
+            @include StyleWH(150px, 135px);
+
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    div.attribution {
+        display: flex;
+        justify-content: center;
+
+        a {
+            color: $color8;
+        }
+    }
+}

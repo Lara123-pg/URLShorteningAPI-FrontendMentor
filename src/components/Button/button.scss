@@ -1,0 +1,19 @@
+@import '../../scss/Variables';
+@import '../../scss/StyleWH';
+@import '../../scss/FontColor';
+
+button.getStarted {
+    @include StyleWH(140px, 40px);
+    @include FontColor($color8, 1rem, 700);
+
+    border: 0;
+    border-radius: 20px;
+
+    background-color: $color1;
+
+    &:hover {
+        cursor: pointer;
+
+        background-color: $buttonHover;
+    }
+}

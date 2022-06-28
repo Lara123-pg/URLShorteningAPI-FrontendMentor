@@ -1,0 +1,8 @@
+@import '../../scss/Variables';
+@import '../../scss/Display';
+
+div.menuHamburger, div.menuResponsive  {
+    visibility: hidden;
+
+    position: absolute;
+}

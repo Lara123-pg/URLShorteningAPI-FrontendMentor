@@ -1,0 +1,198 @@
+main {
+    @include Display(space-between, center, column);
+
+    div.infos {
+        @include Display(space-between, center);
+
+        background-color: $color8;
+
+        padding: 2em 0 6em 4.5em;
+
+        width: 1300px;
+
+        position: relative;
+
+        div.infosImage {
+            @include Display(space-between, center);
+
+            div.infoButton {
+                @include Display(space-between, flex-start, column);
+
+                height: 280px;
+
+                div.title {
+                    @include Display(space-between, flex-start, column);
+
+                    h1 {
+                        @include FontColor($color7, 4.4rem, 700);
+            
+                        width: 500px;
+                    }
+
+                    h2 {
+                        @include FontColor($color4, 1.1rem, 700);
+         
+                        width: 400px;
+                    }
+                }
+            }
+
+            img {
+                @include StyleWH(640px, 490px);
+
+                margin-left: 11em;
+            }
+        }
+    }
+
+    div.cards {
+        @include Display(space-around, center, column);
+        @include StyleWH(1400px, 900px);
+
+        background-color: $color9;
+
+        padding: 2em 0 0 4em;
+
+        div.input {
+            @include StyleWH(1000px, 125px);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            background: $color2 url('../assets/bg-shorten-desktop.svg') no-repeat;
+
+            margin-bottom: 5em;
+
+            border-radius: 10px;
+
+            position: absolute;
+            bottom: -12em;
+
+            div.inputButton {
+                @include Display(space-around, center);
+
+                width: 920px;
+
+                align-self: center;
+
+                input {
+                    @include StyleWH(700px, 50px);
+    
+                    border-radius: 10px;
+                    border: 0;
+
+                    padding-left: 1.5em;
+
+                    font-size: 1rem;
+
+                    border: 1px solid $color6;
+
+                    &::placeholder {
+                        opacity: 0.9;
+
+                        font-weight: 500;
+
+                        color: $color5;
+                    }
+                }
+
+                input.errorInput {
+                    border: 3px solid $color3;
+
+                    &::placeholder {
+                        color: $color3;
+                    }
+                }
+
+                button {
+                    @include StyleWH(150px, 50px);
+                    @include FontColor($color8, 1rem, 700);
+     
+                    border: 0;
+                    border-radius: 10px;
+
+                    background-color: $color1;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        background-color: $buttonHover;
+                    }
+                }
+            }
+
+            span.error {
+                @include FontColor($color3, 0.8rem, 500);
+
+                padding: 1em 0 0 5em;
+            }
+        }
+
+        div.ShortenLink {
+            margin-top: 5em;
+        }
+
+        div.titles {
+            @include Display(space-between, center, column);
+
+            height: 90px;
+
+            margin-top: 7em;
+
+            strong {
+                @include FontColor($color7, 2.3rem, 700);
+            }
+
+            p {
+                @include FontColor($color5, 1rem, 500);
+
+                width: 450px;
+
+                text-align: center;
+            }
+        }
+
+        div.borderCards {
+            @include Display(space-between, center, column);
+
+            position: relative;
+
+            padding-bottom: 8em;
+
+            margin-top: 5em;
+
+            span {
+                width: 97%;
+
+                border-bottom: 7px solid $color1;
+
+                z-index: 1;
+
+                position: absolute;
+                top: 10em;
+
+            }
+
+            div.infoCards {
+                @include Display(space-around, center);
+                @include StyleWH(1150px, 350px);
+
+                z-index: 2;
+            }
+        }
+    }
+
+    div.infoButton2 {
+        @include Display(space-around, center, column);
+        @include StyleWH(100%, 220px);
+
+        background: $color2 url('../assets/bg-boost-desktop.svg') no-repeat;
+
+        padding: 2em 0;
+
+        strong {
+            @include FontColor($color8, 2rem, 700);
+        }
+    }
+}

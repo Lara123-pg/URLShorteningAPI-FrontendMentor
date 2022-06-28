@@ -1,0 +1,97 @@
+@import '../../scss/Variables';
+@import '../../scss/Display';
+@import '../../scss/StyleWH';
+@import '../../scss/FontColor';
+
+div.generalCards {
+    @include Display(flex-end, flex-start, column);
+    @include StyleWH(350px, 220px);
+
+    background-color: $color8;
+
+    padding: 0 0 2.2em 2em;
+    
+    border-radius: 5px;
+
+    position: relative;
+
+    div.icon {
+        @include Display(center, center);
+        @include StyleWH(80px, 80px);
+
+        border-radius: 40px;
+
+        background-color: $color2;
+
+        position: absolute;
+        bottom: 10em;
+    }
+    
+    div.infosTitleCard {
+        @include Display(space-between, flex-start, column);
+        @include StyleWH(100%, 100px);
+
+        strong {
+            @include FontColor($color7, 1.2rem, 700);
+        }
+
+        p {
+            @include FontColor($color5, 0.9rem, 500);
+
+            width: 245px;
+        }
+    }
+}
+
+div#card1 {
+    align-self: flex-start;
+}
+
+div#card2 {
+    align-self: center;
+}
+
+div#card3 {
+    align-self: flex-end;
+}
+
+@media(max-width: 1210px) {
+    div.container {
+        main {
+            div.generalCards {
+                width: 27%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1175px) {
+    div.container {
+        main {
+            div.generalCards {
+                width: 40%;
+
+                padding: 1em;
+
+                justify-content: center;
+                align-items: center;
+
+                div.infosTitleCard {
+                    justify-content: center;
+                    align-items: center;
+
+                    padding-bottom: 1em;
+
+                    strong {
+                        margin: 2em 0;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

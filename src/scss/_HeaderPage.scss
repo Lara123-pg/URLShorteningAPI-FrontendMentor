@@ -1,0 +1,72 @@
+header {
+    @include Display(space-between, center);
+    
+    width: 90%;
+
+    padding: 2em 0 0 1em;
+
+    position: relative;
+
+    z-index: 2;
+
+    div.logoLinks {
+        @include Display(space-between, center);
+
+        width: 400px;
+
+        nav {
+            ul {
+                @include Display(space-between, center);
+
+                list-style: none;
+
+                width: 230px;
+
+                li a {
+                    @include FontColor($color5, 0.9rem, 700);
+        
+                    text-decoration: none;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        color: $color7;
+                    }
+                }
+            }
+        }
+    }
+
+    div.loginSignUp {
+        @include Display(space-between, center);
+
+        width: 150px;
+
+        button.login {
+            @include FontColor($color5, 0.9rem, 700);
+            border: 0;
+
+            background-color: $color8;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        button.signUp {
+            @include StyleWH(90px, 35px);
+            @include FontColor($color8, 0.9rem, 700);
+
+            border: 0;
+            border-radius: 20px;
+
+            background-color: $color1;
+
+            &:hover {
+                cursor: pointer;
+
+                background-color: $buttonHover;
+            }
+        }
+    }
+}

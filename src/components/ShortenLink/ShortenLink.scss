@@ -1,0 +1,183 @@
+@import '../../scss/Variables';
+@import '../../scss/Display';
+@import '../../scss/StyleWH';
+@import '../../scss/FontColor';
+
+div.ShortenLink {
+    @include Display(space-between, center);
+    @include StyleWH(1000px, 70px);
+
+    background-color: $color8;
+
+    border-radius: 5px;
+
+    padding: 1em 2em;
+
+    p.bigLink {
+        @include FontColor($color7, 1.2rem, 500);
+    }
+
+    div.linkButton {
+        @include Display(space-between, center);
+
+        width: 31%;
+
+        input {
+            @include FontColor($color1, 1.1rem, 700);
+
+            width: 180px;
+            
+            border: 0;
+        }
+
+        button.copy {
+            @include StyleWH(85px, 35px);
+            @include FontColor($color8, 0.8rem, 700);
+
+            border: 0;
+            border-radius: 5px;
+
+            background-color: $color1;
+
+            &:hover {
+                cursor: pointer;
+
+                background-color: $buttonHover;
+            }
+        }
+
+        button.copied {
+            background-color: $color2;
+        }
+    }
+}
+
+@media(max-width: 1175px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    width: 950px;
+
+                    margin-left: -5em;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1095px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    margin-left: -2em;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1070px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    @include StyleWH(700px, 120px);
+
+                    flex-direction: column;
+
+                    padding-bottom: 2em;
+
+                    margin: 5em 1em -8em;
+
+                    p.bigLink {
+                        border-bottom: 1px solid $color5;
+
+                        width: 100%;
+
+                        text-align: center;
+                    }
+
+                    div.linkButton {
+                        margin-top: 1em;
+
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 788px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    @include StyleWH(500px, 120px);
+
+                    margin-left: -2.7em;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 545px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    width: 400px;
+
+                    margin-left: -4em;
+
+                    div.linkButton {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 525px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    height: 165px;
+                    
+                    p.bigLink {
+                        text-align: start;
+                    }
+
+                    div.linkButton {
+                        @include Display(space-around, flex-start, column);
+
+                        height: 200px;
+
+                        margin-right: 2em;
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 425px) {
+    div.container {
+        div.urlShorteningApi {
+            main {
+                div.ShortenLink {
+                    margin-left: 15em;
+                }
+            }
+        }
+    }
+}

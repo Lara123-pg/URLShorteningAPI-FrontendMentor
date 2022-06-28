@@ -1,0 +1,21 @@
+@import 'Global';
+@import 'Variables';
+@import 'Display';
+@import 'StyleWH';
+@import 'FontColor';
+
+div.container {
+    @include Display(space-around, center, column);
+
+    div.urlShorteningApi {
+        @include Display(space-between, center, column);
+        @include StyleWH(100vw, 100vh);
+
+        
+        @import 'HeaderPage';
+        @import 'MainPage';
+        @import 'FooterPage';
+    }
+}
+
+@import 'Responsive';
